@@ -10,7 +10,11 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
         body { color: #333; line-height: 1.6; }
         header { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo { height: 50px; } /* Replace with hrbcfulllogo.png */
+        .logo-container img {
+            height: 60px; /* Adjust based on your logo's dimensions */
+            width: auto;
+            display: block;
+        }
         nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; transition: 0.3s; }
         nav a:hover { color: var(--accent); }
         .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1350&q=80'); height: 80vh; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
@@ -25,7 +29,9 @@
 </head>
 <body>
     <header>
-        <div style="font-size: 1.5rem; font-weight: bold; color: var(--accent);">HRBC</div>
+        <div class="logo-container">
+            <img src="hrbcfulllogo.png" alt="HRBC Logo">
+        </div>
         <nav>
             <a href="#about">About</a>
             <a href="#services">Services</a>
